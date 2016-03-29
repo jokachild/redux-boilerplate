@@ -15,6 +15,10 @@
   ],
   "author": "Andrey Myroniuk",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jokachild/redux-boilerplate.git"
+  },
   "dependencies": {
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
