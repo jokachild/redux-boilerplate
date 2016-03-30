@@ -1,5 +1,5 @@
 
-import { ADD_TASK } from "../actions/ActionTypes"
+import { ADD_TASK } from "../actions/types"
 
 const initialState = [{
     text: "First item"

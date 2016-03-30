@@ -15,6 +15,16 @@ module.exports = {
         filename: "bundle.js"
     },
 
+    resolve: {
+        alias: {
+            actions:    path.resolve(__dirname, "src/js/actions"),
+            components: path.resolve(__dirname, "src/js/components"),
+            containers: path.resolve(__dirname, "src/js/containers"),
+            reducers:   path.resolve(__dirname, "src/js/reducers"),
+            sass:       path.resolve(__dirname, "src/scss")
+        }
+    },
+
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin()
     ],

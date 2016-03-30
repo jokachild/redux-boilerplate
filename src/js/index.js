@@ -2,16 +2,20 @@
 import React from "react"
 import { render } from "react-dom"
 import { Provider } from "react-redux"
-import { createStore } from "redux"
-import rootReducer from "./reducers"
+import configureStore from "./store/configureStore"
+
 import Tasks from "./containers/Tasks"
+import Settings from "./containers/Settings"
 
 
-const store = createStore(rootReducer);
+const store = configureStore();
 
 render(
     <Provider store={store}>
-        <Tasks />
+        <div>
+            <Tasks />
+            <Settings />
+        </div>
     </Provider>,
     document.getElementById("root")
 );
