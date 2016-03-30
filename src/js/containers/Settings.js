@@ -2,7 +2,7 @@
 import React from "react"
 import { bindActionCreators } from "redux"
 import { connect } from "react-redux"
-import * as Actions from "../actions"
+import * as Actions from "../actions/settings"
 
 
 class Settings extends React.Component {

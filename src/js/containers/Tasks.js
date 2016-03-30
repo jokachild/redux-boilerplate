@@ -2,7 +2,7 @@
 import React from "react"
 import { bindActionCreators } from "redux"
 import { connect } from "react-redux"
-import * as TodoActions from "../actions"
+import * as Actions from "../actions/tasks"
 
 
 class Tasks extends React.Component {
@@ -39,7 +39,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators(TodoActions, dispatch)
+        actions: bindActionCreators(Actions, dispatch)
     };
 }
 
