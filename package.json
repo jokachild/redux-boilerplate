@@ -8,7 +8,8 @@
     "watch": "webpack -d --watch",
     "lint": "eslint ./src/js --ext .js --ext .jsx",
     "test": "mocha --compilers js:babel-core/register --recursive ./test/unit",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "devtest": "webpack-dev-server --config webpack.test.config.js"
   },
   "keywords": [
     "redux",
