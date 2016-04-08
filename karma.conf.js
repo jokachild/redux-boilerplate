@@ -1,6 +1,9 @@
 // Karma configuration
 // Generated on Sat Apr 09 2016 00:14:48 GMT+0300 (FLE Daylight Time)
 
+var pick = require("lodash").pick;
+var webpackConfig = require("./webpack.test.config");
+
 module.exports = function (config) {
     config.set({
 
@@ -66,18 +69,7 @@ module.exports = function (config) {
         // how many browser should be started simultaneous
         concurrency: Infinity,
 
-        webpack: {
-            devtool: "inline-source-map",
-            module: {
-                loaders: [
-                    {
-                        test: /\.js|\.jsx$/,
-                        loader: "babel",
-                        exclude: /node_modules/
-                    }
-                ]
-            }
-        },
+        webpack: pick(webpackConfig, ["devtool", "module"]),
 
         plugins: [
             "karma-phantomjs-launcher",
