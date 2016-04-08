@@ -1,5 +1,5 @@
 
-import { CHANGE_MODE } from "../actions/types"
+import { CHANGE_MODE } from "../actions/types";
 
 const initialState = {
     mode: "dev"
@@ -7,9 +7,9 @@ const initialState = {
 
 export default function settings(state = initialState, action = null) {
     switch (action.type) {
-        case CHANGE_MODE:
-            return Object.assign({}, state, { mode: action.mode });
-        default:
-            return state;
+    case CHANGE_MODE:
+        return Object.assign({}, state, { mode: action.mode });
+    default:
+        return state;
     }
 }

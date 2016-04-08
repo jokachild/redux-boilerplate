@@ -1,8 +1,8 @@
 
-import React from "react"
-import { bindActionCreators } from "redux"
-import { connect } from "react-redux"
-import * as Actions from "../actions/settings"
+import React from "react";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import * as Actions from "../actions/settings";
 
 
 class Settings extends React.Component {
@@ -13,7 +13,7 @@ class Settings extends React.Component {
     }
 
     render() {
-        const { settings, actions } = this.props;
+        const { settings } = this.props;
         return (
             <div>
                 Settings: {settings.mode}
@@ -38,7 +38,7 @@ Settings.propTypes = {
 function mapStateToProps(state) {
     return {
         settings: state.settings
-    }
+    };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -50,4 +50,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Settings)
+)(Settings);

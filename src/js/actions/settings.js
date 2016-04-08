@@ -1,8 +1,8 @@
 
-import * as types from "./types"
+import * as types from "./types";
 
 function changeMode(mode) {
-    return { type: types.CHANGE_MODE, mode }
+    return { type: types.CHANGE_MODE, mode };
 }
 
-export { changeMode }
+export { changeMode };

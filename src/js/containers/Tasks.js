@@ -1,8 +1,8 @@
 
-import React from "react"
-import { bindActionCreators } from "redux"
-import { connect } from "react-redux"
-import * as Actions from "../actions/tasks"
+import React from "react";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import * as Actions from "../actions/tasks";
 
 
 class Tasks extends React.Component {
@@ -11,7 +11,7 @@ class Tasks extends React.Component {
         this.handleAddTask = this.handleAddTask.bind(this);
     }
     render() {
-        const { tasks, actions } = this.props;
+        const { tasks } = this.props;
         return (
             <div>
                 Task list: {tasks.length}
@@ -34,7 +34,7 @@ Tasks.propTypes = {
 function mapStateToProps(state) {
     return {
         tasks: state.tasks
-    }
+    };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -46,4 +46,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Tasks)
+)(Tasks);
