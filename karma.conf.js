@@ -36,7 +36,19 @@ module.exports = function (config) {
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ["mocha"],
+        reporters: ["mocha", "coverage"],
+
+        coverageReporter: {
+            reporters: [
+                {
+                    type: "html",
+                    dir: "coverage"
+                },
+                {
+                    type: "text-summary"
+                }
+            ]
+        },
 
 
         // web server port
@@ -78,7 +90,8 @@ module.exports = function (config) {
             "karma-mocha",
             "karma-mocha-reporter",
             "karma-sourcemap-loader",
-            "karma-webpack"
+            "karma-webpack",
+            "karma-coverage"
         ]
     });
 };

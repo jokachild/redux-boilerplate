@@ -4,15 +4,20 @@ module.exports = {
     entry: "mocha!./test/index.js",
     output: {
         path: path.resolve(__dirname, "test"),
-        filename: "bundle.js"
+        filename: "test-bundle.js"
     },
     devtool: "inline-source-map",
     module: {
         loaders: [
             {
-                test: /\.js|\.jsx$/,
+                test: /\.js$/,
+                loaders: ["isparta"],
+                include: path.resolve("src/js/")
+            },
+            {
+                test: /\.spec\.js$/,
                 loader: "babel",
-                exclude: /node_modules/
+                include: path.resolve("test/unit/")
             }
         ]
     },

@@ -2,3 +2,4 @@
 /node_modules
 /dist
 /test/bundle.js
+/coverage
